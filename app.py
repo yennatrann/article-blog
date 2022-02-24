@@ -13,6 +13,7 @@ app.config['MYSQL_PASSWORD'] = 'Mn9112p4'
 app.config['MYSQL_DB'] = 'articles'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
+
 # Init MySQL
 mysql = MySQL(app)
 
