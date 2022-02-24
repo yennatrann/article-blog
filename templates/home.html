@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<br>
+<div class="jumbotron">
+    <h1>Welcome to Blog Articles!</h1>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sem augue, lobortis a diam vitae, tincidunt tempus enim. In lacinia ipsum eros, quis porttitor nulla rutrum vel. Etiam eleifend leo non consectetur lobortis. Donec ultrices tortor sit amet efficitur pulvinar. Donec augue velit, egestas vel sagittis in, aliquet vitae ante. Mauris sit amet volutpat enim. Donec a ligula vitae sapien placerat pellentesque a vel est. Nam bibendum vel metus id venenatis.</p>
+
+    {% if session.logged_in == NULL %}
+        <a href="/register" class="btn btn-outline-success my-2 my-sm-0">Register</a>&nbsp;&nbsp;&nbsp;
+        <a href="/login" class="btn btn-outline-success my-2 my-sm-0">Login</a>
+    {% endif %}
+</div>
+{% endblock %}
