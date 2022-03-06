@@ -3,8 +3,6 @@ from flask_mysqldb import MySQL
 from wtforms import Form, StringField, TextAreaField, PasswordField, validators
 from passlib.hash import sha256_crypt
 from functools import wraps
-import os
-from flask import send_from_directory
 
 app = Flask(__name__)
 
@@ -292,12 +290,6 @@ def delete_article(id):
     flash('Article has been deleted successfully.', 'success')
 
     return redirect(url_for('dashboard'))
-
-
-@app.route('/favicon.ico')
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'favicon.ico', mimetype='static/images/favicon.ico')
 
 
 if __name__ == '__main__':
